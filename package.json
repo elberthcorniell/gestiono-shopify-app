@@ -1,0 +1,8 @@
+{
+  "name": "gestiono-app-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "elberthcorniell <elberthcorniell@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
