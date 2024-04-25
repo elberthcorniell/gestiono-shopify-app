@@ -4,5 +4,11 @@
   "main": "index.js",
   "author": "elberthcorniell <elberthcorniell@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "start:server": "cd ./server & node ./bin/www",
+    "start:app:dev": "cd ./app & yarn dev",
+    "start:dev": "yarn start:server & yarn start:app:dev",
+    "dev": "nodemon server.js"
+  }
 }

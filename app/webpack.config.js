@@ -45,9 +45,9 @@ module.exports = () => {
             ],
         },
         plugins: [
-            new BundleAnalyzerPlugin({
-                analyzerMode: 'static',
-            }),
+            // new BundleAnalyzerPlugin({
+            //     analyzerMode: 'static',
+            // }),
             new webpack.DefinePlugin({
                 process: {
                     env: {
