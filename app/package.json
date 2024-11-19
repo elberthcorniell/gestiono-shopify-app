@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {
-    "node": "20.10.0"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": " NODE_ENV=development npx webpack --watch",
@@ -16,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@bitnation-dev/components": "^1.8.5",
-    "@bitnation-dev/management": "^1.5.7",
+    "@bitnation-dev/management": "^2.0.3",
     "@bitnation-dev/service": "^1.0.5",
     "@hookform/resolvers": "^3.3.4",
     "clsx": "^2.1.0",

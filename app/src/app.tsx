@@ -1,17 +1,14 @@
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
-import { ThemeProvider } from "@bitnation-dev/management/dist/package/src/provider/theme"
 import { GestionoProvider } from "@bitnation-dev/management"
-import { UserProvider } from "@bitnation-dev/management/dist/common/utils/hooks/user"
-import { useLocalStorage } from '@bitnation-dev/management/dist/package/src/hooks'
-import { LayoutGrid } from '@bitnation-dev/management/dist/common/ui/components/layout/layout-grid'
 import Projects from './pages/page'
-// import ProjectPage from './pages/[projectId]'
 import { ModalProvider } from '@bitnation-dev/components/dist/components/Modal/Provider'
 import { Route } from './components/router'
-import ProjectPage from './pages/[projectId]'
 import './index.css'
-
+import { useLocalStorage } from '@bitnation-dev/management/hooks/local-storage'
+import { LayoutGrid } from '@bitnation-dev/management/components/layout/layout-grid'
+import { UserProvider } from '@bitnation-dev/management/hooks/user'
+import { ThemeProvider } from '@bitnation-dev/management/src/provider/theme'
 const GlobalStyle = createGlobalStyle`
 :root {
     --color-ui-input: #F4F6F9;
@@ -20,10 +17,10 @@ const GlobalStyle = createGlobalStyle`
 `
 
 export const Root = () => {
-    const theme = useLocalStorage('theme', {
+    const theme = useLocalStorage<'light' | 'dark'>('theme', {
         initialValue: 'light',
         serialize: v => v,
-        deserialize: v => v,
+        deserialize: v => v as 'light' | 'dark',
     })
 
     return <ThemeProvider theme={theme.value}>
@@ -33,9 +30,6 @@ export const Root = () => {
                     <LayoutGrid>
                         <Route path="/">
                             <Projects />
-                        </Route>
-                        <Route path="/[projectId]">
-                            <ProjectPage />
                         </Route>
                     </LayoutGrid>
                     <GlobalStyle />
