@@ -11,7 +11,8 @@ import { BreadcrumbAndHeader } from "@bitnation-dev/management/components/breadc
 import { DivisionWidget } from "@bitnation-dev/management/components/widgets";
 import { useGestiono } from "@bitnation-dev/management/gestiono";
 import { Badge } from "@bitnation-dev/management/components/badge";
-import { TrashIcon } from "node_modules/@bitnation-dev/management/dist/common/ui/icons";
+import { TrashIcon } from "@bitnation-dev/management/icons";
+
 const appId = parseInt(process.env.GESTIONO_APP_ID || '0')
 const Project = () => {
     const alert = useAlert()
@@ -19,6 +20,9 @@ const Project = () => {
     const appData = useGestiono('getAppData', {
         appId,
         type: 'shopify:shop'
+    }, {
+        cache: true,
+        swr: true
     })
     if (divisions.loading) return <p>Cargando...</p>
 
@@ -44,6 +48,7 @@ const Project = () => {
                             <p>{shop.data.shop}</p>
                             <DivisionWidget id={shop.data.divisionId} />
                         </div>
+                        <TrashIcon />
                     </div>
                     <h2 className="mt-5">Accesos</h2>
                     <ul className="flex flex-wrap gap-2">

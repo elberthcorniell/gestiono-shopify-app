@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@bitnation-dev/management@^2.0.4":
-  version "2.0.4"
-  resolved "https://npm.pkg.github.com/download/@bitnation-dev/management/2.0.4/128146d300878881c82450db5729c6f9e83c8d09#128146d300878881c82450db5729c6f9e83c8d09"
-  integrity sha512-2AX+wrtt+zT2Z6t+2dR6AtDsuVkpYuyhHuG6U2Wz3fZTBezUrtwZv253uDepgrVptDYlUNj71vMMvSg0Tw14mQ==
+"@bitnation-dev/management@^2.0.5":
+  version "2.0.5"
+  resolved "https://npm.pkg.github.com/download/@bitnation-dev/management/2.0.5/80b3ec7e6c2ddc0f0c2e445e3a71f1d3d043d798#80b3ec7e6c2ddc0f0c2e445e3a71f1d3d043d798"
+  integrity sha512-+yPfoKmlxD11nSDHW+mAx0gJ5gUUNSfLLFikubCH1wWkuBNo167wQ28Oq3DtUHaD9CxCFS/fQ5ZdT7DXNO9RoQ==
   dependencies:
     tsc-alias "^1.8.10"
     validator "^13.6.0"
